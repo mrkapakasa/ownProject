@@ -52,7 +52,7 @@ const products = [
       { id: 10, name: "Charger", price: 55000.0, image: chargerImage },
       { id: 11, name: "Battery", price: 74000.0, image: batryImage },
       { id: 12, name: "External hard drive", price: 40000.0, image: hddImage },
-      { id: 13, name: "Keyboard", price: 70000.0, image: keyboardImage },
+      { id: 13, name: "Keyboard", price: 14000.0, image: keyboardImage },
       { id: 14, name: "LCD", price: 70000.0, image: lcdImage },
       { id: 15, name: "Mouse", price: 7000.0, image: moiseImage },
     ],
