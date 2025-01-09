@@ -60,7 +60,7 @@ const Settings = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="max-w-3xl mx-auto bg-white bg-opacity-80 rounded-lg shadow-lg p-8">
-        <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">Settings</h1>
+        <h1 className="text-3xl font-bold text-center text-black mb-8">Settings</h1>
 
         {/* Success Message */}
         {successMessage && (
