@@ -5,7 +5,7 @@ import Home from './components/pages/Home';
 import Contact from './components/pages/ContactUs';
 import Login from './components/pages/Login';
 import Products from './components/pages/Products';
-import Setting from './components/pages/Setting'; // Ensure this file exists
+import Setting from './components/pages/Setting';
 import Signup from './components/pages/Signup';
 
 function App() {
