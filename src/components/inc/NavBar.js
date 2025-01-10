@@ -22,9 +22,15 @@ function NavBar() {
 
         {/* Links */}
         <div
-          className={`sm:flex ${isMenuOpen ? 'block' : 'hidden'} sm:items-center`}
+          className={`${
+            isMenuOpen ? 'block' : 'hidden'
+          } sm:flex sm:items-center w-full sm:w-auto sm:space-x-4`}
         >
-          <ul className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 mt-4 sm:mt-0">
+          <ul
+            className={`flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 mt-4 sm:mt-0 ${
+              isMenuOpen ? 'mt-2' : ''
+            }`}
+          >
             <li className="navbar-item">
               <Link
                 to="/"
