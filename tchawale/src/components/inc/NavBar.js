@@ -1,50 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-blue-600 text-white">
-    {/* Navbar content */}
-  
-      <div className="container-fluid">
-        <Link to="/" className="navbar-brand">
-          Easiest way of operating your School!! 
+    <nav className="bg-blue-600 text-white shadow-md">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        {/* Brand */}
+        <Link to="/" className="text-lg font-bold">
+          Easiest way of operating your School!!
         </Link>
+
+        {/* Mobile Menu Button */}
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"  
-        >  
-          <span className="navbar-toggler-icon"></span>
+          className="sm:hidden block text-white focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span className="material-icons">menu</span>
         </button>
-        <div className="nav-links">
-          <ul className="navbar-nav ms-auto">
-            <li className="navbar-item">
-              <Link to="/" className="nav-link active">
+
+        {/* Links */}
+        <div
+          className={`${
+            isMenuOpen ? 'flex' : 'hidden'
+          } flex-col sm:flex sm:flex-row sm:items-center w-full sm:w-auto sm:space-x-4 mt-4 sm:mt-0`}
+        >
+          <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+            <li>
+              <Link
+                to="/"
+                className="text-white hover:text-gray-300 font-medium"
+              >
                 Home
-              </Link> 
+              </Link>
             </li>
-            <li className="navbar-item">
-              <Link to="/login" className="nav-link active">
+            <li>
+              <Link
+                to="/login"
+                className="text-white hover:text-gray-300 font-medium"
+              >
                 Login/SignUp
               </Link>
             </li>
-            <li className="navbar-item">
-              <Link to="/products" className="nav-link active">
+            <li>
+              <Link
+                to="/products"
+                className="text-white hover:text-gray-300 font-medium"
+              >
                 Products
-              </Link>  
-              </li>
-            <li className="navbar-item">
-              <Link to="/settings" className="nav-link">
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/settings"
+                className="text-white hover:text-gray-300 font-medium"
+              >
                 Settings
               </Link>
             </li>
-            <li className="navbar-item">
-              <Link to="/contact" className="nav-link">
+            <li>
+              <Link
+                to="/contact"
+                className="text-white hover:text-gray-300 font-medium"
+              >
                 About
               </Link>
             </li>

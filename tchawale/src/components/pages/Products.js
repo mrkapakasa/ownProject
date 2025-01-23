@@ -142,7 +142,7 @@ const App = () => {
       style={{ backgroundImage: `url(${bg1Image})` }}
     >
       <div className="container mx-auto px-4">
-        <h1 className="text-5xl font-extrabold text-center text-white mb-10">
+        <h1 className="text-5xl font-extrabold text-center text-black mb-10">
           Our Products
         </h1>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
