@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi'; // Import the icon
 
 function TeachersPortal() {
   const navigate = useNavigate();
@@ -131,12 +132,13 @@ function TeachersPortal() {
     <main className="bg-blue-50 min-h-screen flex flex-col items-center">
       {/* Header */}
       <header className="bg-blue-600 text-white w-full py-6 text-center flex justify-between items-center">
-        <button
-          onClick={() => navigate(-1)} // Navigate to the previous page
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
-        >
-          Go Back
-        </button>
+
+<button
+  onClick={() => navigate(-1)} // Navigate to the previous page
+  className="absolute top-4 left-4 bg-blue-600 text-white p-2 rounded-full hover:bg-red-700 transition flex items-center justify-center">
+  <FiArrowLeft size={28  } className="mr-2" /> {/* Arrow Icon */}
+</button>
+
         <div className="flex-grow text-center">
           <h1 className="text-3xl font-bold">Teacher's Portal</h1>
           <p className="text-sm mt-2">Access all the resources you need to manage your classes.</p>

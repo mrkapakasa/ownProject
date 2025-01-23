@@ -7,10 +7,10 @@ function NavBar() {
   return (
     <nav className="bg-blue-600 text-white shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        {/* Brand */}
-        <Link to="/" className="text-lg font-bold">
-          Easiest way of operating your School!!
-        </Link>
+      <div className="text-lg font-bold">
+  School Portal
+</div>
+
 
         {/* Mobile Menu Button */}
         <button
@@ -43,14 +43,7 @@ function NavBar() {
                 Login/SignUp
               </Link>
             </li>
-            <li>
-              <Link
-                to="/products"
-                className="text-white hover:text-gray-300 font-medium"
-              >
-                Products
-              </Link>
-            </li>
+            
             <li>
               <Link
                 to="/settings"

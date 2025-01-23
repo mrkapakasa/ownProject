@@ -11,11 +11,13 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (emailOrPhone && password) {
-      alert('Logging in...');
-      navigate('/products');
+
+    // Check if the email starts with "tchawale"
+    if (emailOrPhone.startsWith('tchawale')) {
+      alert('Login successful!');
+      navigate('/'); // Redirect to home page after successful login
     } else {
-      alert('Please fill in all fields');
+      alert('Invalid email or password.');
     }
   };
 

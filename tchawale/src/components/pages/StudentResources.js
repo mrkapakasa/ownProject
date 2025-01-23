@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
 
 function StudentResources() {
   const navigate = useNavigate();
@@ -25,13 +26,6 @@ function StudentResources() {
       link: '/online-classes',
       bgColor: 'bg-blue-100',
       textColor: 'text-blue-700',
-    },
-    {
-      title: 'Extracurricular Activities',
-      description: 'Explore activities like sports, music, and arts.',
-      link: '/extracurricular',
-      bgColor: 'bg-red-100',
-      textColor: 'text-red-700',
     },
   ];
 
@@ -64,11 +58,12 @@ function StudentResources() {
 
       {/* Go Back Button */}
       <button
-        onClick={() => navigate(-1)} // Navigate to the previous page
-        className="absolute bottom-6 left-6 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
-      >
-        Go Back
-      </button>
+  onClick={() => navigate(-1)} // Navigate to the previous page
+  className="absolute top-4 left-4 bg-blue-600 text-white p-2 rounded-full hover:bg-red-700 transition flex items-center justify-center"
+>
+  <FiArrowLeft size={28} /> {/* Arrow Icon */}
+</button>
+
 
       {/* Footer */}
       <footer className="bg-blue-600 text-white w-full py-4 text-center">
