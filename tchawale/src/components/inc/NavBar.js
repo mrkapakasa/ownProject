@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg bg-blue-600 text-white">
+    {/* Navbar content */}
+  
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
-          Buy Cheap and High Quality Products from Us!! 
+          Easiest way of operating your School!! 
         </Link>
         <button
           className="navbar-toggler"
@@ -15,8 +17,8 @@ function NavBar() {
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation"  
+        >  
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="nav-links">
