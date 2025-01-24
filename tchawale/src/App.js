@@ -4,7 +4,7 @@ import NavBar from './components/inc/NavBar';
 import Home from './components/pages/Home';
 import Contact from './components/pages/ContactUs';
 import Login from './components/pages/Login';
-//import Products from './components/pages/Products';
+import Setting from './components/pages/Setting';
 import Signup from './components/pages/Signup';
 import StudentResources from './components/pages/StudentResources';
 import TeachersPortal from './components/pages/TeachersPortal';
@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        {/* NavBar always visible */}
+
         <NavBar />
 
         {/* Routes for different pages */}
@@ -23,10 +23,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/setting" element={<Setting />} />
           <Route path="/student-resources" element={<StudentResources />} />
           <Route path="/teachers-portal" element={<TeachersPortal />} />
           <Route path="/parent-dashboard" element={<ParentDashboard />} />
-          {/* Handle undefined routes */}
+        
           <Route path="*" element={<div className="not-found">Page Not Found</div>} />
         </Routes>
       </div>
